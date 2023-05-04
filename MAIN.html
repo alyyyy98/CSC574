@@ -1,0 +1,776 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #EFDAE0;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: PaleVioletRed;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #FFFDD2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: 	IndianRed;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #BDE2F3;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: Azure;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* button links */
+
+* {
+            margin: 0;
+            padding: 0;
+        }
+          
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+          
+        .section {
+            width: 30vw;
+            height: 20vh;
+            background-color: #EF5354;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            margin: 10px 5px;
+        }
+          
+        .one,
+        .three {
+            background-color: #E03B8B;
+        }
+          
+        .nav {
+            width: 10vw;
+            height: 10vh;
+            background-color: #3944F7;
+            font-size: large;
+            color: white;
+            text-align: center;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+        }
+          
+        .btn {
+            color: white;
+            background-color: #38CC77;
+            height: 40px;
+            width: 80px;
+            padding: 2px;
+            border: 2px solid black;
+            text-decoration: none;
+        }
+        
+        /* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 4px 4px;
+  background-color: #cf3030;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 10%;
+
+}
+
+
+
+/* SIGN UP*/
+<table>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 20%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+width: 50%;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn,.clearbtn{
+     width: 100%;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="header">
+<img src="MENU.png" 
+width="1400" height="200">
+
+<h2 style="color:Aquamarine;">WELCOME TO MY WEBSITE</h2>
+ 
+</div>
+<nav>
+<div class="topnav">
+<p style="color:White;"><a href="#Biography">Biography</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Galleries">Galleries</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Audios">Audios</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Resume">Resume</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Timetable">Timetable</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Downloads">Downloads</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Links">Links</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Login">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+</p> 	
+
+</div>
+
+
+
+
+
+<div class="row">
+  <div class="column">
+    <h2>Contact Me</h2>
+<a href="https://www.instagram.com/"><img src="insta logo.png" alt="INSTAGRAM" style="width:82px;height:62px;"></a>
+<br>
+   <a href="https://www.facebook.com/"><img src="facebook logo.png" alt="FB" style="width:82px;height:62px;"></a>
+
+  </div>
+
+<section id="Biography">
+<div class="container">
+  <div class="column">
+    <h2>Biography</h2>
+    <p>I am Alya Batrisyia binti Khairul Nizam. I'm 20 years old and born on the 9th August 2003. Iam the first child among the four children of my parents. We live in Taman Pelangi Semeyih 2,Semenyih, Selangor.<br><br>
+I am 1st year college student of BS Netcentric Computing in UiTM Shah Alam.<br><br>
+      This is my fav singer :<p><a href="https://www.youtube.com/results?search_query=taylor+swift">So let's find out</a></p>
+    </p>
+    
+    </p>
+  </div>
+  
+  <center>
+ <section id="Galleries">
+<div class="container"> 
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+    
+      <h2>Galleries</h2>
+      <h5>Images and videos</h5>
+       <p> <img src="gambar1.png" alt="gambar1" style="width:130px;height:200px;">&nbsp;&nbsp;&nbsp;<img src="gambar6.png" alt="gambar6" style="width:120px;height:200px;">
+       <img src="gambar2.png" alt="gambar2" style="width:120px;height:200px;">&nbsp;&nbsp;&nbsp;<img src="gambar7.png" alt="gambar7" style="width:120px;height:200px;">
+       <img src="gambar3.png" alt="gambar3" style="width:120px;height:200px;">&nbsp;&nbsp;&nbsp;<img src="gambar8.png" alt="gambar8" style="width:120px;height:200px;">
+       <img src="gambar4.png" alt="gambar4" style="width:120px;height:200px;">&nbsp;&nbsp;&nbsp;<img src="gambar9.png" alt="gambar9" style="width:120px;height:200px;">
+       <img src="gambar5.png" alt="gambar5" style="width:120px;height:200px;">&nbsp;&nbsp;&nbsp;<img src="gambar10.png" alt="gambar10" style="width:120px;height:200px;"></p>
+      <div 
+    </div>
+    <div class="card">
+
+<video width="200" controls>
+  <source src="VIDEO2.mp4" type="video/mp4">
+ 
+</video>
+
+<video width="200" controls>
+  <source src="VIDEO1.mp4" type="video/mp4">
+  
+</video>
+<video width="200" controls>
+  <source src="VIDEO3.mp4" type="video/mp4">
+  
+</video>
+<video width="200" controls>
+  <source src="VIDEO4.mp4" type="video/mp4">
+  
+</video>
+<video width="200" controls>
+  <source src="VIDEO5.mp4" type="video/mp4">
+  
+</video>
+<p>
+<br>
+<br>
+<section id="Audios">
+<div class="container">
+<center>
+<h2>Audios</h2>
+<audio controls>
+  
+  <source src="AUDIO1.mp3" type="audio/mpeg">
+
+</audio><br>
+<audio controls>
+  
+  <source src="AUDIO2.mp3" type="audio/mpeg">
+
+</audio><br>
+<audio controls>
+  
+  <source src="AUDIO3.mp3" type="audio/mpeg">
+
+</audio><br>
+<audio controls>
+  
+  <source src="AUDIO4.mp3" type="audio/mpeg">
+
+</audio><br>
+<audio controls>
+  
+  <source src="AUDIO5.mp3" type="audio/mpeg">
+
+</audio><br>
+<audio controls>
+  
+  <source src="AUDIO6.mp3" type="audio/mpeg">
+
+</audio><br>
+
+</center>
+
+</p>
+<br>
+<br>
+<section id="Resume">
+<div class="container">
+<button class="button">MY RESUME</button>
+
+<center>
+<table border="5" size="90">
+<tr>
+<td colspan=4>
+<br>
+<br>
+<b>Name:</b>Alya Batrisyia<br>
+<b>Date of Birth:</b> 9 August 2003(20 Years)<br>
+<b>Tel:</b> 012345678<br>
+<b>Address:</b> NO 10 ,Jalan TPS 2/16,Taman Pelangi Semenyih 2,43500,Kajang,Selangor
+</td>
+<td><img src="gambar1.png"alt="gambar1" style=" height=150px; width=200px"/></td>
+</tr>
+<tr>
+<td colspan=5><h4>PostGraduate Degree in Netcentric Computing</h4><b><i>Specialization:</i></b> IT</td>
+</tr>
+<tr>
+<br>
+<br>
+
+<td colspan=5><h3>Academics:</h3></td>
+</tr>
+<tr>
+<td><b>Education level</b></td>
+<td><b>Board/University</b></td>
+<td><b>CGPA</b></td>
+<td><b>Year</b></td>
+</tr>
+<tr>
+<td>Degree</td>
+<td>UiTM Shah Alam</td>
+<td>3.74</td>
+<td>2022</td>
+</tr>
+
+<tr>
+<td>Matriculation</td>
+<td>Kedah Matriculation College</td>
+<td>3.67</td>
+<td>2020</td>
+</tr>
+
+<tr>
+<td>School</td>
+<td>SMK Taman Jasmin 2</td>
+<td>5A</td>
+<td>2020</td>
+</tr>
+
+<tr>
+<td colspan=5>
+
+<br>
+<h3>Achievements:</h3>
+<ul>
+<li>Successfully presented project on HTML and CSS .</li>
+</ul>
+
+<br>
+<h4>Language:</h4><br>
+<ul>
+<li>Bahasa Melayu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%</li><br>
+<li>English&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%</li><br>
+<li>Arabic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%</li>
+
+<br>
+<br>
+<h3>Extracurricular Activities:</h3>
+<br>
+
+<ul>
+<li>Kuiz Kimia Kebangsaan</li>
+<li>Internatinal Mangrove Planting</li>
+
+</td>
+</tr>
+</center>
+
+
+</table>
+
+<br>
+<br>
+<section id="Timetable">
+<div class="container">
+<h2>My Timetable</h2>
+
+ <div 
+    </div>
+    <div class="card">
+<table>
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <td><div class="nav">
+        <a href="#section1" class="btn">ICT450</a>
+</div></td>
+    <td><div class="nav">
+        <a href="#section2" class="btn">CSC574</a>
+</div></td>
+    <td><div class="nav">
+        <a href="#section3" class="btn">MAT421</a>
+</div></td>
+    <td><div class="nav">
+        <a href="#section4" class="btn">STA416</a>
+</div></td>
+    <td><div class="nav">
+        <a href="#section5" class="btn">CSC520</a>
+</div></td>
+  </tr>
+  
+</table>
+
+<div class="section one" id="section1"><br><br><br>
+        SUBJECT :DATABASE<br>
+        LECTURER: DR NOR AZIAH<br>
+	  PLACE : DK2
+    </div>
+    <div class="section two" id="section2"><br><br><br>
+        SUBJECT: WEB DEVELOPMENT<br>
+        LECTURER:DR AINA<br>
+	  PLACE : DK3
+    </div>
+    <div class="section three" id="section3"><br><br><br>
+        SUBJECT: CALCULUS 1<br>
+        LECTURER: DR SYAZA<br>
+	  PLACE : TH01
+    </div>
+    <div class="section four" id="section4"><br><br><br>
+        SUBJECT: STATISTIC<br>
+        LECTURER:DR FADHILAH<br>
+	  PLACE : BK18
+    </div>
+    <div class="section five" id="section5"><br><br><br>
+        SUBJECT : OPERATING SYSTEM<br>
+        LECTURER: DR HASLINDA<br>
+	  PLACE : BK21
+    </div>
+<br>
+<br>
+<section id="Downloads">
+<div class="container">
+
+<h2> Downloads</h2>
+<a href="RESUME.png" download >  
+  <img src="RESUME.png" alt="RESUME" width="70" height="102">
+<br>
+<a href = "resumepdf.pdf" download >  
+ <img src="logoresume.png" alt="RESUME" width="90" height="122">  
+</a> 
+ <br>
+<a href = "timetable.pdf" download >  
+ <img src="timetable1.png" alt="RESUME" width="100" height="122">  
+</a><br>
+<a href = "pdf1.pdf" download >  
+ <img src="wajah.png" alt="RESUME" width="100" height="122">  
+</a>
+
+
+
+
+<br>
+<br>
+<br>
+<section id="Links">
+<div class="container">
+<h2>Links</h2>
+<br>
+<br>
+<a href="https://istudent.uitm.edu.my/index_isp.htm"><img src="istudent.png" alt="ISTUDENT" style="width:202px;height:62px;"></a>
+<br>
+<br>
+<a href="https://fskm.uitm.edu.my/v5/index.php/ms/"><img src="fskm.png" alt="FSKM" style="width:202px;height:62px;"></a>
+<br>
+<br>
+<a href="https://ufuture.uitm.edu.my/login"><img src="ufuture.png" alt="UFUTURE" style="width:202px;height:62px;"></a>
+
+
+<br>
+<br>
+
+<br>
+<br>
+<form action="/action_page.php">
+<section id="Login">
+<div class="container">
+
+<table>
+<h2>Lets join us </h2>
+
+<p>If you already have an account, log in here.</p><br>
+  <tr>
+    <td><label for="name">ID:</label></td>
+    <td> <input type="text" id="pin" name="pin" maxlength="10"><br><br> </td>
+  </tr>
+  
+  <tr>
+    <td><label for="pin">Enter a PIN:</label></td>
+    <td><input type="password" id="pwd" name="pwd"><br><br></td>
+  </tr>
+
+
+</table>
+
+<input type="reset" value="Clear">
+  <input type="submit" value="Submit">
+
+</form>
+  <br><br>
+
+<form action="/action_page.php" style="border:1px solid #ccc">
+  <div class="container">
+  <h3>If you dont have an account ,sign up here</h3>
+    <br>
+    <p>Please fill in this form to create an account </p>
+    <hr>
+<td><label for="name"><b>ID</b></label></td>
+    <td> <input type="text" id="pin" name="pin" maxlength="10"><br><br> </td>
+  </tr>
+   <tr>
+    <td><label for="name"><b>User Name</b></label></td>
+    <td><input type="text" id="zip" name="zip"><br><br></td>
+  </tr>
+      <tr>
+    <td><label for="name"><b>First Name</b></label></td>
+    <td><input type="text" id="zip" name="zip"><br><br></td>
+  </tr>
+		 <tr>
+    <td><label for="name"><b>Last Name</b></label></td>
+    <td><input type="text" id="zip" name="zip"><br><br></td>
+  </tr>
+  <tr>
+    <td><label for="phone"><b>Phone number:</b></label></td>
+    <td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{8}" required><h4>(example:012-34567890)</h4> <br><br></td>
+  </tr>
+  <tr>
+    <td><label><b>Gender:</b></label></td>
+    <td><input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label><br><br><br><br></td>
+  </tr>
+  <tr>
+    <td><label for="name"><b>Address</b></label></td>
+    <td><input type="text" id="zip" name="zip"><br><br></td>
+  </tr>
+  
+   <tr>
+    <td><label for="state"><b>State:&nbsp;&nbsp;</b></label></td>
+    <td><select id="state" name="state">
+    <option>Select state</option>
+    <option value="Perlis">Perlis</option>
+    <option value="kedah">Kedah</option>
+    <option value="Penang">Penang</option>
+    <option value="Klumpur">K.Lumpur</option>
+    <option value="Perak">Perak</option>
+    <option value="Pahang">Pahang</option>
+    <option value="Sabah">Sabah</option>
+    <option value="Sarawak">Sarawak</option>
+    <option value="Johor">Johor</option>
+    <option value="Melaka">Melaka</option>
+    <option value="Terengganu">Terengganu</option>
+    <option value="Negeri Sembilan">Negeri Sembilan</option>
+    </select><br><br><br><br></td>
+  </tr>
+  
+   <tr>
+    <td><label for="ED"><b>Educational Background:&nbsp;&nbsp;</b></label></td>
+    <td><select id="ED" name="ED">
+    <option>Select educational background</option>
+    <option value="SPM">SPM</option>
+    <option value="Diploma">Diploma</option>
+    <option value="Matriculation">Matriculation</option>
+    <option value="Degree">Degree</option>
+    <option value="Perak">Perak</option>
+    <option value="Master">Master</option>
+    <option value="PHD">PHD</option> <br><br>
+ 
+ 
+
+ <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+      <button><input type="reset" value="Clear"></button>
+    </div>
+  </div>
+</form>
+</table>
+
+<br>
+<br>
+<h3>Disclaimer</h3><br>
+<p><a href="https://www.youtube.com/results?search_query=taylor+swift">Taylor Swift</a></p>
+<p><a href="https://www.youtube.com/watch?v=VuNIsY6JdUw">You Belong With Me</a></p>
+<p><a href="https://www.youtube.com/watch?v=e-ORhEE9VVg">Blank Space</a></p>
+<p><a href="https://www.youtube.com/watch?v=WA4iX5D9Z64">We are never getiing back together</a></p>
+<p><a href="https://www.youtube.com/watch?v=oGA3aHWBO0I">Style</a></p>
+<p><a href="https://www.youtube.com/watch?v=GrKQvyXpNgc">Cruel Summer</a></p>
+<p><a href="https://www.youtube.com/watch?v=Odh9ddPUkEY">Midnight rain</a></p>
+<p><a href="https://www.nawpic.com/cute-aesthetic-13/">Picture1</a></p>
+<p><a href="https://vt.tiktok.com/ZS8wcJwH5/">rin</a></p>
+<p><a href="https://vt.tiktok.com/ZS8wcNd2Q/">G</a></p>
+<p><a href="https://vt.tiktok.com/ZS8wcYyEX/">Ayra</a></p>
+
+
+<br>
+<footer>
+<p>© Copyright 2023 Alya LTd.</p>
+</footer>
+
+
+
+</body> 
+</html>
+
+
